@@ -1,44 +1,84 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
-        <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Deus é Amor</title>
-        <style>
-            header{
-                background-color: #551F1F;
-                color: #FFFFFF;
-                text-align: center;
-                max-width: 800px;
-                margin: 0 auto;
-                padding: 16px;
-                border: 5px solid #551F1F;
-            }
-            main{
-                background-color: #FFFFFF;
-                color: #551F1F;
-                max-width: 800px;
-                margin: 0 auto;
-                padding: 16px;
-            }
-            img{
-                width: 80px;
-                height: 80px;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1> Jesus Salva</h1>
-            <p>Não percam tempo buscando as coisas do mundo, saibam que o único que cura é Deus!</p>
-        </header>
-        <main>
-            <img src="Jesus&ovelha.png" alt="Ilustração em aquarela com tons claros de Jesus sorrindo enquanto segura carinhosamente um pequeno cordeiro nos braços, sobre um fundo neutro.">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deus é Amor</title>
+    <style>
+        header {
+            background-color: #551F1F;
+            color: #FFFFFF;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+            border: 5px solid #551F1F;
+        }
+
+        main {
+            background-color: #FFFFFF;
+            color: #551F1F;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+            display: flex;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .artigo-autor {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1> Jesus Salva</h1>
+        <p class="artigo-autor">Não percam tempo buscando as coisas do mundo, saibam que o único que cura é Deus!</p>
+        <button>✝️​<span>0</span>​​</button>
+        <button>✨​​<span>0</span>​​</button>
+
+    </header>
+    <main>
+        <img src="Jesus&ovelha.png"
+            alt="Ilustração em aquarela com tons claros de Jesus sorrindo enquanto segura carinhosamente um pequeno cordeiro nos braços, sobre um fundo neutro.">
+        <div>
             <h2>Primeira anotação:</h2>
             <p>Por: Leiriane de Souza</p>
             <p>Como começo a buscar a Deus?</p>
-        </main>
-    </body>
+            <button>✝️​<span>0</span>​​</button>
+            <button>✨​​<span>0</span>​​</button>
+        </div>
+
+    </main>
+</body>
+<script>
+    const botoes = document.querySelectorAll("Button");
+
+    botoes.forEach(function (botao) {
+        let curtiu = false;
+        botao.addEventListener("click", botaoClicado);
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+            if (curtiu === false){
+                texto.textContent++;
+                curtiu = true; 
+            } else{
+                texto.textContent--;
+                curtiu = false;
+            }
+        }
+    }
+    )
+
+
+</script>
+
 </html>
